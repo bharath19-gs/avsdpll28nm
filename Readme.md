@@ -7,17 +7,39 @@
  
  <h2> Contents: </h2>
 
-1. [28/30nm PDK]
-2. [tool used]
-3. [PLL introduction]
-4. [Circuit details]
-5. [Circuit Design]
-6. [Simulations]. 
+1. [28/32nm PDK](#28/32nm-PDK)
+2. [Tool used](#Tool-used)
+3. [PLL introduction](#PLL-introduction)
+4. [Circuit Details](#Circuit-Details)
+5. [Circuit Design](#Circuit-Design)  
+    - Charge pump(CP)
+    - Phase Frequency Detector(PFD)
+    - Loop filter
+    - Voltage Controlled Oscillator(VCO)
+    - Frequency divider
+6. [Simulations](#Simulations)
 7. [Acknowlegements]
 8. [Contact]
  
  
  
+ ### 28/32nm PDK
+  "32-nanometre" refers to the average half-pitch (i.e., half the distance between identical features) of a memory cell at this technology level.  The 28-nanometre node was an intermediate half-node die shrink based on the 32-nanometre process.
+  
+  So for the design of the PLL we will be using the 28/32nm PDK file.
+
+
+### Tool used 
+
+***Synopsys Custom Compiler Tool Details***
+
+The [Synopsys Custom Compiler™](https://www.synopsys.com/implementation-and-signoff/custom-design-platform/custom-compiler.html) design environment is a modern solution for full-custom analog, custom digital, and mixed-signal IC design. As the heart of the Synopsys Custom Design Platform, Custom Compiler provides design entry, simulation management and analysis, and custom layout editing features. It delivers industry-leading productivity, performance, and ease-of-use while remaining easy to adopt for users of legacy tools.
+ 
+ ![custom_compiler](https://github.com/bharath19-gs/6T_SRAM_CELL/blob/main/6T_SRAM/custom_compiler.png)
+ 
+ 
+
+<h2> PLL introduction <h2>
 ### What does a PLL(Phase-locked loop) contain?
   Phase locked loops mainly consist of the following 4 components 
   - Charge pump(CP)
@@ -40,7 +62,7 @@ VCO is the most important block in PLL. It produces high frequency output signal
 
 The above image shows the basic PLL design with all the components integrated.
 
-### Circuit design 
+### Circuit Design 
  Let us discuss about each block in the PLL circuit design.
 1. Charge pump (CP)
    
