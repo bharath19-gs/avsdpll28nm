@@ -12,14 +12,14 @@
 3. [PLL introduction](#PLL-introduction)
 4. [Circuit Details](#Circuit-Details)
 5. [Circuit Design](#Circuit-Design)  
-    - Charge pump(CP)
-    - Phase Frequency Detector(PFD)
-    - Loop filter
-    - Voltage Controlled Oscillator(VCO)
-    - Frequency divider
+    - [Charge pump(CP)](#Charge-pump(CP))
+    - [Phase Frequency Detector(PFD)](#Phase-Frequency-Detector(PFD))
+    - [Low Pass Filter(LPF)](#Low-Pass-Filter(LPF))
+    - [Voltage Controlled Oscillator(VCO)](#Voltage-Controlled-Oscillator(VCO))
+    - [Frequency Divider(FD)](#Frequency-Divider(FD))
 6. [Simulations](#Simulations)
 7. [Acknowlegements]
-8. [Contact]
+
  
  
  
@@ -29,7 +29,7 @@
   So for the design of the PLL we will be using the 28/32nm PDK file.
 
 
-### Tools used 
+### Tools Overview 
 
 ***Synopsys Custom Compiler Tool Details***
 
@@ -85,29 +85,72 @@ The above image shows the basic PLL design with all the internal blocks integrat
 
  The phase frequency detector(PFD) is responsible for comparing 2 signals(the reference signal and the output signal).So, from the comparing of the 2 signals we get to know that which signal is leading/lagging comnmpared to the other,The ouput of PFD is in digital form.
  
- The PFD schematic can be observed below with the symbol generated using the Tool
- ![PFD](https://github.com/bharath19-gs/avsdpll28nm/blob/main/pll_images/Charge_pump_schematic.png)
- ![PFD]()
-
+ The referred design used : </br>
+ ![PFD](https://github.com/bharath19-gs/avsdpll28nm/blob/main/pll_images/PFD.png)
+ 
+ The PFD schematic can be observed below with the symbol generated using the Tool for the Pre-layout simulations.
+ ![PFD](https://github.com/bharath19-gs/avsdpll28nm/blob/main/pll_images/Phase_detector_schematic.png)
+ ![PFD](https://github.com/bharath19-gs/avsdpll28nm/blob/main/pll_images/Phase_detector_symbol.png)
+ 
  2. Charge pump(CP)
  
  The CP converts the digital output from PFD to an analog signal . This analog signal is what would control the Voltage Controlled Oscillator(VCO). The analog ouput from CP is passed through a low pass filter before connecting to the VCO. This low pass filter can help smoothen the signal in addition to stabilizing the feedback loop.
+ 
+  The referred design used : </br>
+ ![CP](https://github.com/bharath19-gs/avsdpll28nm/blob/main/pll_images/CP.png)
+ 
+ 
+ The CP schematic can be observed below with the symbol generated using the Tool for the Pre-layout simulations.
+![CP](https://github.com/bharath19-gs/avsdpll28nm/blob/main/pll_images/Charge_pump_schematic.png)
+ ![CP](https://github.com/bharath19-gs/avsdpll28nm/blob/main/pll_images/Charge_pump_symbol.png)
+
+ 
 
  3. Low Pass filer(LPF)
  
  A low pass filter is used to remove out the noise from a signal, noise are high frequency signals.
   In the case of our PLL it is used to smoothen out the signal for the Voltage Controlled Oscillator(VCO).
+  
+ ![LPF](https://github.com/bharath19-gs/avsdpll28nm/blob/main/pll_images/Low_pass_filter.png)
  
  4. Voltage Controlled Oscillator(VCO)
  
   Voltage controlled oscillators are the actual parts which produces alternating digital clock signal. The frequency of this clock signal can be controlled by input voltage, hence the name.
+  
+   The referred design used : </br>
+ ![VCO](https://github.com/bharath19-gs/avsdpll28nm/blob/main/pll_images/VCO.png)
+ 
+  The PFD schematic can be observed below with the symbol generated using the Tool for the Pre-layout simulations.
+ ![VCO](https://github.com/bharath19-gs/avsdpll28nm/blob/main/pll_images/VCO_schematic.png)
+ ![VCO](https://github.com/bharath19-gs/avsdpll28nm/blob/main/pll_images/VCO_symbol.png)
+
+ 
  
  5. Frequency Divider(FD)
  
   A PLL with a frequency divider on its feedback loop is called a clock multiplier PLL. Such a PLL can make clock signals which are multiples of the reference signals.
-   
+   ![FD](https://github.com/bharath19-gs/avsdpll28nm/blob/main/pll_images/Freq_divider_schematic.png)
+ ![FD](https://github.com/bharath19-gs/avsdpll28nm/blob/main/pll_images/Freq_divider_symbol.png)
 
 
+
+### Simulations
+
+
+
+
+### References 
+[1] [PLL Design using 130nm PDK](#https://github.com/lakshmi-sathi/avsdpll_1v8) </br>
+[2] [Phase locked loop](#https://github.com/ShubhamTomar9675/Phase_Locked_Loop) </br>
+
+
+
+### Acknowlegements
+
+Kunal Ghosh, Co-founder , VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com </br>
+Muthukrishnan Chinnasamy , CEO of SFAL </br>
+Montu Makadia, SFAL </br>
+Lakshmi S, Instructor - 8x PLL Clock Multiplier IP </br>
 
 
 
