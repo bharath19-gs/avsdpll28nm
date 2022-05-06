@@ -18,7 +18,8 @@
     - [Voltage Controlled Oscillator(VCO)](#Voltage-Controlled-Oscillator(VCO))
     - [Frequency Divider(FD)](#Frequency-Divider(FD))
 6. [Simulations](#Simulations)
-7. [Acknowlegements]
+7. [References](#References)
+8. [Acknowlegements](#Acknowlegements)
 
  
  
