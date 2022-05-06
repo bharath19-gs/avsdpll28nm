@@ -1,7 +1,8 @@
 # PLL 
  A phase-locked loop or PLL is a control system that generates an output signal whose phase is related to the phase of an input signal. \
  PLLs are widely used for synchronization purposes, including clock generation and distribution inside the SoC’s.
- We will be building the PLL using 28nm technology node.
+ We will be building the PLL using 28nm
+ technology node.
  
  
  <h2> Contents: </h2>
@@ -22,6 +23,7 @@
   - Charge pump(CP)
   - Phase Frequency Detector(PFD)
   - Voltage Controlled Oscillator(VCO)
+
   - Frequency divider
   A phase-locked loop or PLL is a closed loop feedback circuit comprises of four main blocks phase frequency detector (PFD), charge pump (CP), low pass filter (LPF) and voltage-controlled oscillator (VCO) PLL as shown in Fig.1. These blocks are connected to form a closed loop feedback network so as to synchronize the output with the input in both phase and frequency. And this loop continues to run until PLL locked condition is achieved i.e., either zero or constant phase difference between the reference input and the feedback pulse from the output of PLL. PLL is castoff as on chip clock generator, frequency synthesizer and clock and data recovery system in radio, computers and telecommunication system. In general, as technology scale down a PLL with wide tuning range, low jitter, and PLL operating at high frequencies are preferred.
   
@@ -39,6 +41,9 @@ VCO is the most important block in PLL. It produces high frequency output signal
 The above image shows the basic PLL design with all the components integrated.
 
 ### Circuit design 
+ Let us discuss about each block in the PLL circuit design.
+1. Charge pump (CP)
+   
 
 
 
