@@ -14,7 +14,7 @@
 5. [Circuit Design](#Circuit-Design)  
     - [Charge pump(CP)](#Charge-pump(CP))
     - [Phase Frequency Detector(PFD)](#Phase-Frequency-Detector(PFD))
-    - [Low Pass Filter(LPF)](#Low-Pass-Filter(LPF))
+    - [Loop-Filter](#Loop-Filter)
     - [Voltage Controlled Oscillator(VCO)](#Voltage-Controlled-Oscillator(VCO))
     - [Frequency Divider(FD)](#Frequency-Divider(FD))
 6. [Simulations](#Simulations)
@@ -54,7 +54,7 @@ The [Synopsys Custom Compiler™](https://www.synopsys.com/implementation-and-si
   - Charge pump(CP)
   - Phase Frequency Detector(PFD)
   - Voltage Controlled Oscillator(VCO)
-  - Low Pass Filter(LPF) 
+  - Loop Filter 
   - Frequency Divider(FD)
  
  
@@ -107,7 +107,7 @@ The above image shows the basic PLL design with all the internal blocks integrat
 
  
 
- 3. Low Pass filer(LPF)
+ 3. Loop Filter
  
  A low pass filter is used to remove out the noise from a signal, noise are high frequency signals.
   In the case of our PLL it is used to smoothen out the signal for the Voltage Controlled Oscillator(VCO).
