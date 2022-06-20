@@ -135,7 +135,37 @@ The above image shows the basic PLL design with all the internal blocks integrat
 
 
 
-### Simulations
+### Pre-Layout Simulations
+
+First lets start with the outputs of the VCO(Voltage controlled Oscillator)
+
+![VCO](https://github.com/bharath19-gs/avsdpll28nm/blob/main/pll_images/VCO_sim.png)
+
+
+going ahead with CP(charge pump)
+
+case 1: with the UP input acitvated.
+
+![case1](https://github.com/bharath19-gs/avsdpll28nm/blob/main/pll_images/Charge_pump_up.png)
+
+case 2: with the DOWN input activated.
+
+![case2](https://github.com/bharath19-gs/avsdpll28nm/blob/main/pll_images/Charge_pump_down.png)
+
+
+Next is the FD(Frequency Divider)(just one stage)
+
+![FD](https://github.com/bharath19-gs/avsdpll28nm/blob/main/pll_images/Freq_divider_prelayout_simulation.png)
+
+Finally the PFD(Phase Frequency Detector) Block
+
+![PFD](https://github.com/bharath19-gs/avsdpll28nm/blob/main/pll_images/PFD_output.jpeg)
+
+
+
+The final Output of the PLL is as below with all blocks integrated.
+
+![PLL](https://github.com/bharath19-gs/avsdpll28nm/blob/main/pll_images/Final_output.jpeg)
 
 
 
